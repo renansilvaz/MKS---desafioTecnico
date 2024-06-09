@@ -1,0 +1,178 @@
+.aside {
+  position: fixed;
+  z-index: 1;
+  height: min(100vh);
+  width: 30vw;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $principalColor;
+  color: $backgroundColor;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 768px) {
+    width: 85vw;
+    .aside-header{
+      justify-content: space-around;
+
+      p{
+        font-size: 26px;
+      }
+    }
+    .auxiliar .product-box{
+      width: 250px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+
+      .qtd-price{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+    
+  }
+
+  @media (max-width: 1068px) and (min-width: 769px) {
+    width: 60vw;
+  }
+
+  & p, img {
+    background-color: $principalColor;
+  }
+}
+
+.aside-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 15%;
+  background-color: $principalColor;
+
+  & div {
+    width: 50%;
+  }
+
+  & p {
+    font-size: $bigFontSize;
+    font-weight: $extraBoldFontWheigth;
+    line-height: 33px;
+  }
+}
+
+.auxiliar {
+  background-color: $principalColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: $black;
+  margin: 5px 25px;
+  background: $backgroundColor;
+  width: 80%;
+  border-radius: 8px;
+
+  position: relative;
+
+  & .little-close {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    z-index: 100;
+    color: $backgroundColor;
+    background-color: $black;
+    border-radius: 50%;
+  }
+}
+
+.product-qtd {
+  border-radius: 4px;
+  border: 0.3px solid $border-color;
+  padding: 4px;
+  width: 14vh;
+  height: 4.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & span {
+    padding: 1px 10px;
+  }
+
+  & button {
+    border: none;
+    outline: none;
+    padding: 2px 5px;
+    font-size: $regularFontSize;
+    cursor: pointer;
+  }
+  
+  & .minus {
+    border-right: 1px solid $border-color;
+  }
+
+  & .plus {
+    border-left: 1px solid $border-color;
+  }
+}
+
+.total {
+  width: 100%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  background-color: $principalColor;
+  padding: 5px 0;
+  position: absolute;
+  bottom:0;
+  margin-bottom: 17vh;
+  padding: 0 5%;
+
+  & p {
+    font-weight: $extraBoldFontWheigth;
+    line-height: $regularFontHeigth;
+  }
+}
+
+.aside-footer {
+  width: 100%;
+  font-size: 20px;
+  height: 12vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $black;
+  border: none;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  
+  & p {
+    background-color: $black;
+    font-weight: $extraBoldFontWheigth;
+    bottom: 5vh;
+  }
+}
+
+.product-price{
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 6px 15px;
+  background-color:#373737;
+  border-radius: 4px;
+}

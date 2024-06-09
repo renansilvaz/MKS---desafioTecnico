@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "variables.scss";
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/main.scss";
+@import "components/card.scss";
+@import "components/side-bar.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $fontFamily;
+  font-weight: $regularFontWheigth;
+  font-size: $regularFontSize;
+  background-color: $backgroundColor;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
